@@ -1,0 +1,20 @@
+.sekolah-color{
+    background-color: #191D88;
+}
+
+.sekolah-color-secondary{
+    background-color: #262aa1;
+}
+
+nav .container button{
+    border: none;
+}
+
+nav .collapse .dropdown-menu{
+    background-color: #262aa1;
+}
+
+nav .collapse .dropdown-menu li a:hover{
+    background-color: #14176b;
+}
+

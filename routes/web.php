@@ -1,5 +1,9 @@
 <?php
 
+use App\Models\About;
+use App\Models\Extracurricular;
+use App\Models\Facility;
+use App\Models\Major;
 use App\Models\School;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -17,7 +21,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index', [
-        'sekolah' => School::all()
+        'sekolah' => School::first(),
+        'ekskul' => Extracurricular::orderBy('name')->get(),
+        'visiMisi' => About::all(),
+        'fasilitas' => Facility::orderBy('facility_name', 'asc')->get(),
+        'jurusan' => Major::where('id', '>', 1)->get(),
+        'jurusanPertama' => Major::first()
     ]);
 });
 

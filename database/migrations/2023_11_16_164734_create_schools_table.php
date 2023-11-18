@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->string('name')->default('SMK Taman Ilmu Kromengan');
+            $table->text('about');
             $table->string('address1')->default('Jl. Nailun Selatan');
             $table->string('address2')->default('Kromengan');
             $table->string('address3')->default('Kromengan');
