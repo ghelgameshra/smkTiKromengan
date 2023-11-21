@@ -50,9 +50,39 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'firstname' => ['required', 'string', 'max:20'],
+            'middlename' => ['nullable', 'string', 'max:20'],
+            'lastname' => ['nullable', 'string', 'max:20'],
+            'nisn' => ['required', 'string', 'max:14', 'unique:users'],
+            'telephone' => ['required', 'string', 'max:14', 'min:12', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ], [
+            'firstname.required' => 'Nama depan wajib diisi!',
+            'firstname.max' => 'Nama depan tidak boleh lebih dari 20 karakter!',
+            'firstname.string' => 'Nama depan harus berupa karakter!',
+
+            'middlename.max' => 'Nama depan tidak boleh lebih dari 20 karakter!',
+            'middlename.string' => 'Nama depan harus berupa karakter!',
+
+            'lastname.max' => 'Nama depan tidak boleh lebih dari 20 karakter!',
+            'lastname.string' => 'Nama depan harus berupa karakter!',
+
+            'nisn.required' => 'NISN wajib diisi!',
+            'nisn.unique' => 'NISN sudah terdaftar!',
+
+            'telephone.required' => 'Telephone wajib diisi!',
+            'telephone.min' => 'Telephone minimal 12 angka!',
+            'telephone.max' => 'Telephone maximal 14 angka!',
+            'telephone.unique' => 'Telephone sudah terdaftar!',
+
+            'email.required' => 'Email wajib diisi!',
+            'email.string' => 'Email harus berupa karakter!',
+            'email.unique' => 'Email sudah terdaftar!',
+
+            'password.required' => 'Password wajib diisi!',
+            'password.confirmed' => 'Konfirmasi password tidak sesuai!',
+            'password.min' => 'Password minimal 8 karakter'
         ]);
     }
 
@@ -64,8 +94,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $data['firstname'] = ucfirst($data['firstname']);
+        $data['middlename'] = ucfirst($data['middlename']);
+        $data['lastname'] = ucfirst($data['lastname']);
+
         return User::create([
-            'name' => $data['name'],
+            'firstname' => $data['firstname'],
+            'middlename' => $data['middlename'],
+            'lastname' => $data['lastname'],
+            'nisn' => $data['nisn'],
+            'telephone' => $data['telephone'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

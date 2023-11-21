@@ -41,7 +41,7 @@
 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
         <li class="nav-item border border-warning rounded me-auto">
-          <a class="nav-link text-warning fw-bold px-2" href="/ppdb">PPDB {{ now()->format('Y') }}</a>
+          <a class="nav-link text-warning fw-bold px-2" href="/pendaftaran-siswa-baru">PPDB {{ now()->format('Y') }}</a>
         </li>
 
         <li class="nav-item border border-warning rounded me-auto">

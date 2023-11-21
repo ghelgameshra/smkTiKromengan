@@ -30,6 +30,17 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/pendaftaran-siswa-baru', function () {
+    return view('student.register', [
+        'sekolah' => School::first(),
+        'ekskul' => Extracurricular::orderBy('name')->get(),
+        'visiMisi' => About::all(),
+        'fasilitas' => Facility::orderBy('facility_name', 'asc')->get(),
+        'jurusan' => Major::where('id', '>', 1)->get(),
+        'jurusanPertama' => Major::first()
+    ]);
+})->name('buatakun');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

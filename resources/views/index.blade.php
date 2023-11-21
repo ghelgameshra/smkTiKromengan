@@ -1,7 +1,5 @@
 @extends('partials.main')
-@section('icon')
-  <link rel="icon" href="/storage/assets/logo-smkti.png" type="image/icon type">
-@endsection
+
 @section('title')
   {{ $sekolah->name }}
 @endsection
@@ -44,7 +42,7 @@
   {{-- akhir card fasilitas --}}
 
   {{-- jurusan --}}
-  <div class="accordion container mt-5 py-3 position-relative" id="accordionExample">
+  <div class="accordion container mt-5 py-3 position-relative" id="accordionExample" style="margin-bottom: 100px">
     <span class="position-absolute top-0 start-50 translate-middle fw-semibold fs-5 bg-warning px-4 py-1 rounded">JURUSAN</span>
     <div class="accordion-item">
       <h2 class="accordion-header">
