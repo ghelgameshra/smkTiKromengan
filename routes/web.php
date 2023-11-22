@@ -49,6 +49,12 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/dashboard-siswa', function(){
+        return view('student.dashboard.dashboard', [
+            'sekolah' => School::first(),
+        ]);
+    });
 });
 
 Auth::routes();

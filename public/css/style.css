@@ -18,3 +18,7 @@ nav .collapse .dropdown-menu li a:hover{
     background-color: #14176b;
 }
 
+nav .collapse .dropdown-menu li #logout-form:hover{
+    background-color: #14176b;
+}
+

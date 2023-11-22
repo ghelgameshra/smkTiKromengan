@@ -1,3 +1,8 @@
+@if (auth()->user()->level == 0)
+  @php
+      header('Location: /dashboard-siswa');
+  @endphp
+@endif
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
