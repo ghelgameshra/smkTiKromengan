@@ -45,7 +45,7 @@
         </li>
 
         <li class="nav-item border border-warning rounded me-auto">
-          <a class="nav-link text-warning fw-bold px-2 d-flex align-items-center gap-1" href="/login-siswa">
+          <a class="nav-link text-warning fw-bold px-2 d-flex align-items-center gap-1" href="{{ route('login.siswa') }}">
             <i class="bi bi-person-circle"></i>
             <span>Login</span>
           </a>

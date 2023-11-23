@@ -41,6 +41,14 @@ Route::get('/pendaftaran-siswa-baru', function () {
     ]);
 })->name('buatakun');
 
+Route::get('/login-siswa', function(){
+    return view('student.login', [
+        'sekolah' => School::first(),
+        'ekskul' => Extracurricular::orderBy('name')->get(),
+        'visiMisi' => About::all(),
+    ]);
+})->name('login.siswa');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
