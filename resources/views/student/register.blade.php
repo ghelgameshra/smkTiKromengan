@@ -37,8 +37,7 @@ Pendaftaran
       <div class="col-12 col-sm-12 col-md-6 col-lg-4">
         <div class="mb-3">
           <div class="input-group">
-            <label style="width: 150px" for="namaDepan" class="input-group-text">Nama Depan</label>
-            <input id="namaDepan" name="firstname" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('firstname') }}">
+            <input id="namaDepan" name="firstname" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('firstname') }}" placeholder="Nama Depan Siswa">
             @error('firstname')
             <span class="input-group-text text-danger">
               <i class="bi bi-exclamation-octagon"></i>
@@ -52,8 +51,7 @@ Pendaftaran
 
         <div class="mb-3">
           <div class="input-group">
-            <label style="width: 150px" for="namaTengah" class="input-group-text">Nama Tengah</label>
-            <input id="namaTengah" name="middlename" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('middlename') }}">
+            <input id="namaTengah" name="middlename" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('middlename') }}" placeholder="Nama Tengah Siswa">
             @error('middlename')
             <span class="input-group-text text-danger">
               <i class="bi bi-exclamation-octagon"></i>
@@ -67,8 +65,7 @@ Pendaftaran
 
         <div class="mb-3">
           <div class="input-group position-relative">
-            <label style="width: 150px" for="namaAkhir" class="input-group-text">Nama Belakang</label>
-            <input id="namaAkhir" name="lastname" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('lastname') }}">
+            <input id="namaAkhir" name="lastname" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('lastname') }}" placeholder="Nama Akhir Siswa">
             @error('lastname')
             <span class="input-group-text text-danger">
               <i class="bi bi-exclamation-octagon"></i>
@@ -82,8 +79,7 @@ Pendaftaran
 
         <div class="mb-3">
           <div class="input-group">
-            <label style="width: 150px" for="nisn" class="input-group-text">NISN</label>
-            <input id="nisn" name="nisn" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('nisn') }}">
+            <input id="nisn" name="nisn" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('nisn') }}" placeholder="Nomor Induk Siswa Nasional">
             @error('nisn')
             <span class="input-group-text text-danger">
               <i class="bi bi-exclamation-octagon"></i>
@@ -101,8 +97,7 @@ Pendaftaran
 
         <div class="mb-3">
           <div class="input-group position-relative">
-            <label style="width: 150px" for="password" class="input-group-text">Password</label>
-            <input id="password" name="password" type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <input id="password" name="password" type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1" placeholder="Password Baru">
             <button class="input-group-text" type="button" id="showPassword">
               <i class="bi bi-eye-slash" id="showPasswordIcon"></i>
             </button>
@@ -116,8 +111,7 @@ Pendaftaran
 
         <div class="mb-3">
           <div class="input-group position-relative">
-            <label style="width: 150px" for="confirmPassword" class="input-group-text">Re-input Password</label>
-            <input id="confirmPassword" name="password_confirmation" type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <input id="confirmPassword" name="password_confirmation" type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1" placeholder="Konfirmasi Kata Sandi">
             <button class="input-group-text" type="button" id="showConfirmPassword">
               <i class="bi bi-eye-slash" id="showConfirmPasswordIcon"></i>
             </button>
@@ -134,8 +128,7 @@ Pendaftaran
 
         <div class="mb-3">
           <div class="input-group">
-            <label style="width: 150px" for="email" class="input-group-text">E-Mail</label>
-            <input id="email" name="email" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('email') }}">
+            <input id="email" name="email" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('email') }}" placeholder="Email Siswa">
             @error('email')
             <span class="input-group-text text-danger">
               <i class="bi bi-exclamation-octagon"></i>
@@ -149,8 +142,7 @@ Pendaftaran
 
         <div class="mb-3">
           <div class="input-group">
-            <label style="width: 150px" for="telephone" class="input-group-text">No. Telephone</label>
-            <input id="telephone" name="telephone" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('telephone') }}">
+            <input id="telephone" name="telephone" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('telephone') }}" placeholder="Nomor Telephone Siswa">
             @error('telephone')
             <span class="input-group-text text-danger">
               <i class="bi bi-exclamation-octagon"></i>

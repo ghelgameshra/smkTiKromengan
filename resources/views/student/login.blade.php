@@ -25,7 +25,7 @@
               <label for="email" class="input-group-text">
                 <i class="bi bi-envelope-open"></i>
               </label>
-              <input id="email" name="email" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('email') }}">
+              <input id="email" name="email" type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" value="{{ old('email') }}">
               @error('email')
               <span class="input-group-text text-danger">
                 <i class="bi bi-exclamation-octagon"></i>
@@ -39,7 +39,7 @@
               <label for="password" class="input-group-text">
                 <i class="bi bi-key"></i>
               </label>
-              <input id="password" name="password" type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+              <input id="password" name="password" type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1" placeholder="Password">
               <button class="input-group-text" type="button" id="showPassword">
                 <i class="bi bi-eye-slash" id="showPasswordIcon"></i>
               </button>
